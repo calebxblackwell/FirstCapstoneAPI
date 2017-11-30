@@ -1,8 +1,42 @@
 /*Header*/
+h1{
+  display:inline-block;
+  box-sizing:border-box;
+  padding:10px;
+  border:none;
+  font-size:50px;
+  font-family:'Pacifico', cursive;
+  color:white;
+  text-align:center;
+}
 
 /*Body*/
+body{
+  background-color: #00bf8f;
+}
 
 /*Button styling*/
+#instagram{
+  color:#fbad50;
+}
 
 /*playback area styling*/
-
+home{
+  width:800px;
+  height:315px; /*try max-width?*/
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  margin:auto;
+}
+footer{
+  display:inline-block;
+  box-sizing:border-box;
+  padding:10px;
+  border:none;
+  text-align:center;
+  color:white;
+  font-size:14px;
+}
