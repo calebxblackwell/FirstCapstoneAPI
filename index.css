@@ -4,7 +4,7 @@ h1{
   box-sizing:border-box;
   padding:10px;
   border:none;
-  font-size:50px;
+  font-size:80px;
   font-family:'Pacifico', cursive;
   color:white;
   text-align:center;
@@ -13,6 +13,12 @@ h1{
 /*Body*/
 body{
   background-color: #00bf8f;
+  line-height: 1;
+	height: 100%;
+	text-align: center;
+	width: 100%;
+	margin: 10px;
+	padding: 10px;
 }
 
 /*Button styling*/
@@ -20,17 +26,12 @@ body{
   color:#fbad50;
 }
 
-/*playback area styling*/
+/*Playback area styling*/
 home{
-  width:800px;
-  height:315px; /*try max-width?*/
-  position:absolute;
-  top:0;
-  right:0;
-  bottom:0;
-  left:0;
-  margin:auto;
+  width: 500px;
+	height: 300px;
 }
+
 footer{
   display:inline-block;
   box-sizing:border-box;
