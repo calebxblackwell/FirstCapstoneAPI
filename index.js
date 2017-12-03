@@ -17,7 +17,8 @@ $(document).ready(function() {
 	}
 	//below is random code from the survey google api site 
 	function surveyInfo(){
-		"title": "Vine Rating Scale Survey"
+	  $.getJSON("", {
+		"title": "Vine Rating Scale Survey",
 		"owners": ["calebxblackwell@gmail.com"],
 		"wantedResponseCount": 100,
 		"audience": {
@@ -32,4 +33,5 @@ $(document).ready(function() {
 			"type": "ratingScale"
 		}]
 	}
+	)}
 });
