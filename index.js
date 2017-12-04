@@ -17,22 +17,17 @@ $(document).ready(function() {
 	}
 	//below is random code from the survey google api site 
 	function surveyInfo(){
-	  $.getJSON("", {
-		"title": "Vine Rating Scale Survey",
-		"owners": ["calebxblackwell@gmail.com"],
-		"wantedResponseCount": 100,
-		"audience": {
-			"country": "US",
-			"languages": ["en-US"]
-		},
-		"questions": [{
-			"question": "Do you like Vine videos?",
-			"numStars": "ten",
-			"lowValueLabel": "Not much.",
-			"highValueLabel": "A lot!",
-			"type": "ratingScale"
-		}]
+	  $.ajax("https://www.googleapis.com/surveys/v2/surveys",{
+	    method:"GET",
+	   headers:{
+	     Authorization: `Bearer ya29.GlwYBWffo_VXQ1f5bK9sGMQvGrYIXRmvonRcq1V2G-w2HonzdBa2wzlkkhUzzzn-bmgVTVnIObkd_BBMlCNyGYekRpd8C2sqyDnFZK7H32DN3-gkast_QAxDmsps2w`,
+	     'Content-Type': 'application/json',
+	   } 
+	  },
+	 
+	  (response, error) => {
+	  console.log(response, error);
 	}
 	)}
-	  return surveyInfo();
+	surveyInfo();
 });
