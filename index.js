@@ -8,7 +8,8 @@ $(document).ready(function() {
 		});
 	}
 	//listener for the search button
-	$('.search_button').on('click', function() {
+	$('.search_button').on('click', function(e) {
+	  e.preventDefault();
 		//listener for the form input
 		var userInput = $('#form-value').val().trim();
 		//change spaces to + for the api to work
@@ -28,6 +29,5 @@ $(document).ready(function() {
 		$('#reset_button').on('click', function() {
 			$('#here_is_gif').attr("src", '');
 		});
-		return false;
-	});
+		return false; //prevents default page refresh
 	});
