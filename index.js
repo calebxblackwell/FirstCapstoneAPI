@@ -19,10 +19,11 @@ $(document).ready(function() {
 			url: queryUrl,
 			method: 'GET'
 		}).done(function(response) {
+		//api response data
 			console.log(response.data);
 			var giphyURL = response.data[0].images.fixed_height.url;
 			console.log(giphyURL);
-			$('#here_is_gif').attr("src", giphyURL);
+			$('#here_is_gif').attr('src', giphyURL);
 		});
 		$('#reset_button').on('click', function() {
 			$('#here_is_gif').attr("src", '');

@@ -16,18 +16,18 @@
       <h1>Vine on Loop</h1>
       <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
     </header>
-    <div class="home">
+    <div class="home" role="heading">
       <!--This page is for loading the video playback -->
       <iframe allowfullscreen frameborder="0" height="480" src="https://www.youtube.com/embed/videoseries?&controls=0&showinfo=0&loop=1&list=PLJN8x-yLMqWIjPyx3wNZG10gC8BWRO1Jn" width="854"></iframe><br>
       <br>
     </div><!--closing div for home class-->
-    <div class="info" role="info">
+    <div class="info" role="contentinfo">
       <!--This page is for linking to a giphy search api-->
       <p>Search for Vine related gifs below!</p>
-      <form class="gif-form">
+      <form class="gif-form" role="form">
         <input class="search-input-rounded" id="form-value" type="text"> <button class="search_button" type="submit">Search for GIFs</button> <input id="reset_button" type="reset" value="Reset">
       </form>
-      <div class="rando_facts animated bounceIn"><img id="here_is_gif" src=""></div><!--closing div for bounce in-->
+      <div class="rando_facts animated bounceIn"><img id="here_is_gif" src="" alt="here_is_gif"></div><!--closing div for bounce in-->
     </div><!--closing div for info class-->
   </div><!--closing div for main class-->
   <footer>
@@ -37,3 +37,4 @@
   <script src="index.js">
   </script>
 </body>
+</html>
