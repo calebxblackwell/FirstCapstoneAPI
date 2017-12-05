@@ -7,29 +7,26 @@ $(document).ready(function() {
 			"key": 'AIzaSyDnFkudd6I1TMdIrE3OjM7wnIUsaMcRBPs',
 		});
 	}
-	//giphy api request
-	function giphySearch() {
-		$.getJSON("api.giphy.com/v1/gifs/search", {
-			"q": string,
-			"part": 'snippet',
-			"key": '6if1ypXf6jk20a8li9GAolyxMZ5hZ8uu',
-			"limit": 10,
+	//listener for the search button
+	$('.search_button').on('click', function() {
+		//listener for the form input
+		var userInput = $('#form-value').val().trim();
+		//change spaces to + for the api to work
+		userInput = userInput.replace(/ /g, "+");
+		//giphy api url
+		var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=6if1ypXf6jk20a8li9GAolyxMZ5hZ8uu';
+		$.ajax({
+			url: queryUrl,
+			method: 'GET'
+		}).done(function(response) {
+			console.log(response.data);
+			var giphyURL = response.data[0].images.fixed_height.url;
+			console.log(giphyURL);
+			$('#here_is_gif').attr("src", giphyURL);
 		});
-	}
-	//giphy js sdk code 
-	var xhr = $.get("http://api.giphy.com/v1/gifs/search?&api_key=6if1ypXf6jk20a8li9GAolyxMZ5hZ8uu&limit=10");
-	xhr.done(function(data){ console.log("success got data", data);
+		$('#reset_button').on('click', function() {
+			$('#here_is_gif').attr("src", '');
+		});
+		return false;
 	});
-	//initialize giphy SDK
-  var GphApiClient = require('giphy-js-sdk-core'),
-  client = GphApiClient("6if1ypXf6jk20a8li9GAolyxMZ5hZ8uu"),
-    //giphy search info from website
-  client.search('gifs', {"q": "cats"})
-  .then((response) => {
-    response.data.forEach((gifObject) => {
-      console.log(gifObject);
-    });
-  })
-  .catch((err) => {
-  });
-});
+	});

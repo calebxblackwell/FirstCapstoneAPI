@@ -10,7 +10,7 @@
   <title>Vine on Loop</title>
 </head>
 <body>
-  <div class="main" role="main" aria-live="assertive">
+  <div aria-live="assertive" class="main" role="main">
     <!--This is the header area-->
     <header>
       <h1>Vine on Loop</h1>
@@ -18,17 +18,22 @@
     </header>
     <div class="home">
       <!--This page is for loading the video playback -->
-       <iframe allowfullscreen frameborder="0" height="480" src="https://www.youtube.com/embed/videoseries?&controls=0&showinfo=0&loop=1&list=PLJN8x-yLMqWIjPyx3wNZG10gC8BWRO1Jn" width="854"></iframe>
+      <iframe allowfullscreen frameborder="0" height="480" src="https://www.youtube.com/embed/videoseries?&controls=0&showinfo=0&loop=1&list=PLJN8x-yLMqWIjPyx3wNZG10gC8BWRO1Jn" width="854"></iframe><br>
+      <br>
     </div><!--closing div for home class-->
     <div class="info" role="info">
       <!--This page is for linking to a giphy search api-->
-      
-      </div><!--closing div for info class-->
+      <p>Search for Vine related gifs below!</p>
+      <form class="gif-form">
+        <input class="search-input-rounded" id="form-value" type="text"> <button class="search_button" type="submit">Search for GIFs</button> <input id="reset_button" type="reset" value="Reset">
+      </form>
+      <div class="rando_facts animated bounceIn"><img id="here_is_gif" src=""></div><!--closing div for bounce in-->
+    </div><!--closing div for info class-->
   </div><!--closing div for main class-->
   <footer>
     <h4>RIP Vine. January 24, 2013-January 17, 2017<br>
     We don't have to move on.</h4>
   </footer>
-  <script src="index.js"></script>
+  <script src="index.js">
+  </script>
 </body>
-</html>
