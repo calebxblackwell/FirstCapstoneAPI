@@ -7,27 +7,29 @@ $(document).ready(function() {
 			"key": 'AIzaSyDnFkudd6I1TMdIrE3OjM7wnIUsaMcRBPs',
 		});
 	}
-	//survey api request
-	function googleSurvey() {
-		$.getJSON("", {
-			"q": searchTerm,
+	//giphy api request
+	function giphySearch() {
+		$.getJSON("api.giphy.com/v1/gifs/search", {
+			"q": string,
 			"part": 'snippet',
-			"key": 'AIzaSyCsCqAZs51XlAKQm1hdne25TuPqy8AMB2s',
+			"key": '6if1ypXf6jk20a8li9GAolyxMZ5hZ8uu',
+			"limit": 10,
 		});
 	}
-	//below is random code from the survey google api site 
-	function surveyInfo(){
-	  $.ajax("https://www.googleapis.com/surveys/v2/surveys",{
-	    method:"GET",
-	   headers:{
-	     Authorization: `Bearer ya29.GlwYBWffo_VXQ1f5bK9sGMQvGrYIXRmvonRcq1V2G-w2HonzdBa2wzlkkhUzzzn-bmgVTVnIObkd_BBMlCNyGYekRpd8C2sqyDnFZK7H32DN3-gkast_QAxDmsps2w`,
-	     'Content-Type': 'application/json',
-	   } 
-	  },
-	 
-	  (response, error) => {
-	  console.log(response, error);
-	}
-	)}
-	surveyInfo();
+	//giphy js sdk code 
+	var xhr = $.get("http://api.giphy.com/v1/gifs/search?&api_key=6if1ypXf6jk20a8li9GAolyxMZ5hZ8uu&limit=10");
+	xhr.done(function(data){ console.log("success got data", data);
+	});
+	//initialize giphy SDK
+  var GphApiClient = require('giphy-js-sdk-core'),
+  client = GphApiClient("6if1ypXf6jk20a8li9GAolyxMZ5hZ8uu"),
+    //giphy search info from website
+  client.search('gifs', {"q": "cats"})
+  .then((response) => {
+    response.data.forEach((gifObject) => {
+      console.log(gifObject);
+    });
+  })
+  .catch((err) => {
+  });
 });
