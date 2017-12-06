@@ -9,6 +9,15 @@ h1{
   color:white;
   text-align:center;
 }
+h2{
+    display:inline-block;
+  box-sizing:border-box;
+  padding:10px;
+  border:none;
+  font-size:20px;
+  color:white;
+  text-align:center;
+}
 
 /*Body*/
 body{
@@ -31,6 +40,38 @@ p{
   text-align:center;
   color:white;
   font-size:18px;
+}
+input[type=text] {
+    width: 200px;
+    height:20px;
+}
+.search-button, .reset-button{
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.search-button, .reset-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.search-button, .reset-button span:after {
+  content: '\00bb';
+  transition: 0.5s;
+}
+.search-button, .reset-button:hover span {
+  padding-right: 25px;
+}
+.search-button, .reset-button:hover span:after {
+  opacity: 1;
 }
 /*Footer area */
 footer{

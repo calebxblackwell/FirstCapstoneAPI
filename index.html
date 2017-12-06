@@ -15,6 +15,7 @@
     <header>
       <h1>Vine on Loop</h1>
       <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+      <h2>14+ hours of Vines on a loop, and searchable gifs for hours of internet hilarity!</h2>
     </header>
     <div class="home" role="heading">
       <!--This page is for loading the video playback -->
@@ -25,7 +26,7 @@
       <!--This page is for linking to a giphy search api-->
       <p>Search for Vine related gifs from GIPHY below!</p>
       <form class="gif-form" role="form">
-        <input class="search-input-rounded" id="form-value" type="text"> <button class="search_button" type="submit">Search for GIFs</button> <input id="reset_button" type="reset" value="Reset">
+        <input type="text" class="search-input-rounded" id="form-value"> <button class="search-button" type="submit">Search for GIFs</button> <input class="reset-button" id="reset-button" type="reset" value="Reset">
       </form>
       <div class="gif-image animated bounceIn"><img id="here_is_gif" src="https://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=6if1ypXf6jk20a8li9GAolyxMZ5hZ8uu" alt="">
       </div><!--closing div for bounce in-->
@@ -38,3 +39,4 @@
   <script src="index.js">
   </script>
 </body>
+</html>

@@ -8,7 +8,7 @@ $(document).ready(() => {
 		});
 	}
 	//listener for the search button
-	$('.search_button').on('click', function(e) {
+	$('.search-button').on('click', function(e) {
 	  e.preventDefault();
 		//listener for the form input
 		var userInput = $('#form-value').val().trim();
@@ -26,7 +26,7 @@ $(document).ready(() => {
 			console.log(giphyURL);
 			$('#here_is_gif').attr('src', giphyURL);
 		});
-		$('#reset_button').on('click', function() {
+		$('#reset-button').on('click', function() {
 			$('#here_is_gif').attr("src", '');
 		});
 		return false; //prevents default page refresh
