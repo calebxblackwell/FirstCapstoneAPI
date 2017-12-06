@@ -8,6 +8,8 @@ h1{
   font-family:'Pacifico', cursive;
   color:white;
   text-align:center;
+  max-width: 640px;
+  width: 100%;
 }
 h2{
     display:inline-block;
@@ -17,6 +19,8 @@ h2{
   font-size:20px;
   color:white;
   text-align:center;
+  max-width: 640px;
+  width: 100%;
 }
 
 /*Body*/
@@ -67,6 +71,7 @@ input[type=text] {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  width: 100%;
 }
 .search-button, .reset-button span {
   cursor: pointer;
@@ -93,4 +98,6 @@ footer{
   text-align:center;
   color:white;
   font-size:14px;
+  max-width: 640px;
+  width: 100%;
 }
