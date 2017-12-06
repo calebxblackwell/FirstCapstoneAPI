@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
 	//youtube api request
 	function loadVideo() {
 		$.getJSON("https://www.googleapis.com/youtube/v3/search", {
@@ -15,13 +15,13 @@ $(document).ready(function() {
 		//change spaces to + for the api to work
 		userInput = userInput.replace(/ /g, "+");
 		//giphy api url
-		var queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=6if1ypXf6jk20a8li9GAolyxMZ5hZ8uu';
+		const queryURL = 'https://api.giphy.com/v1/gifs/search?q=' + userInput + '&api_key=6if1ypXf6jk20a8li9GAolyxMZ5hZ8uu';
 		$.ajax({
-			url: queryUrl,
+			url: queryURL,
 			method: 'GET'
-		}).done(function(response) {
+		}).done(response => {
 		//api response data
-			console.log(response.data);
+			console.log(response);
 			var giphyURL = response.data[0].images.fixed_height.url;
 			console.log(giphyURL);
 			$('#here_is_gif').attr('src', giphyURL);
@@ -31,3 +31,4 @@ $(document).ready(function() {
 		});
 		return false; //prevents default page refresh
 	});
+});
