@@ -71,7 +71,7 @@ input[type=text] {
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
-  width: 100%;
+  
 }
 .search-button, .reset-button span {
   cursor: pointer;
